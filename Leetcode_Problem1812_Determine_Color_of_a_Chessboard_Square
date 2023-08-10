@@ -1,0 +1,48 @@
+bool squareIsWhite(char * coordinates){
+    int data;
+    switch(coordinates[0])
+    {
+        case 'a':
+            data = 0;
+            break;
+        case 'b':
+            data = 1;
+            break;
+        case 'c':
+            data = 2;
+            break;
+        case 'd':
+            data = 3;
+            break;
+        case 'e':
+            data = 4;
+            break;
+        case 'f':
+            data = 5;
+            break;
+        case 'g':
+            data = 6;
+            break;
+        case 'h':
+            data = 7;
+            break;
+    }
+    return ((data%2 == 0 && coordinates[1]%2 == 0) || (data%2 != 0 && coordinates[1]%2 != 0));
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+bool squareIsWhite(char * coordinates){
+    int data = coordinates[0] - 'a';
+    return ((data%2 == 0 && coordinates[1]%2 == 0) || (data%2 != 0 && coordinates[1]%2 != 0));
+}
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+bool squareIsWhite(char * coordinates){
+    return (((coordinates[0] - 'a')%2 == 0 && coordinates[1]%2 == 0) || ((coordinates[0] - 'a')%2 != 0 && coordinates[1]%2 != 0));
+}
